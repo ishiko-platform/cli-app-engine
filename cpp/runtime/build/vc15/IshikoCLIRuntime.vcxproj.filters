@@ -17,7 +17,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\Ishiko\CLIAppEngine\Runtime.h">
+    <ClInclude Include="..\..\..\include\Ishiko\CLIAppEngine\Runtime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

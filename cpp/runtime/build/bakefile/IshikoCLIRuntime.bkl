@@ -7,7 +7,7 @@ library IshikoCLIRuntime
 {
     archs = x86 x86_64;
 
-    includedirs += ../../include/Ishiko/CLIAppEngine;
+    includedirs += ../../../include/Ishiko/CLIAppEngine;
 
     if ($(toolset) == gnu)
     {
@@ -27,6 +27,6 @@ library IshikoCLIRuntime
 
     headers
     {
-        ../../include/Ishiko/CLIAppEngine/Runtime.h
+        ../../../include/Ishiko/CLIAppEngine/Runtime.h
     }
 }
