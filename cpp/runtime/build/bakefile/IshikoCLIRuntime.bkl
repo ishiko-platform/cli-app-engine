@@ -1,0 +1,32 @@
+toolsets = gnu vs2017;
+
+gnu.makefile = ../gnumake/GNUmakefile;
+vs2017.solutionfile = ../vc15/IshikoCLIRuntime.sln;
+
+library IshikoCLIRuntime
+{
+    archs = x86 x86_64;
+
+    includedirs += ../../../include/Ishiko/CLIAppEngine;
+
+    if ($(toolset) == gnu)
+    {
+        cxx-compiler-options = "-std=c++11";
+        outputdir = ../../lib;
+    }
+
+    if ($(toolset) != gnu)
+    {
+        outputdir = ../../lib/$(arch);
+    }
+
+    if ($(config) == Debug)
+    {
+        basename = IshikoCLIRuntime-d;
+    }
+
+    headers
+    {
+        ../../../include/Ishiko/CLIAppEngine/Runtime.h
+    }
+}
