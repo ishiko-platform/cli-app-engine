@@ -12,12 +12,12 @@ library IshikoCLIRuntime
     if ($(toolset) == gnu)
     {
         cxx-compiler-options = "-std=c++11";
-        outputdir = ../../lib;
+        outputdir = ../../../lib;
     }
 
     if ($(toolset) != gnu)
     {
-        outputdir = ../../lib/$(arch);
+        outputdir = ../../../lib/$(arch);
     }
 
     if ($(config) == Debug)
