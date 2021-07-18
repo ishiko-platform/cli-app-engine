@@ -6,7 +6,7 @@ toolsets = gnu vs2017;
 gnu.makefile = ../gnumake/GNUmakefile;
 vs2017.solutionfile = ../vc15/IshikoCLIRuntimeTests.sln;
 
-program IshikoADLTests : IshikoTests
+program IshikoCLIRuntimeTests : IshikoTests
 {
     archs = x86 x86_64;
 
