@@ -1,0 +1,23 @@
+ishikopath = envvar("ISHIKO_CPP");
+import $(ishikopath)/tests/include/Ishiko/Tests.bkl;
+
+toolsets = gnu vs2017;
+
+gnu.makefile = ../gnumake/GNUmakefile;
+vs2017.solutionfile = ../vc15/IshikoCLIRuntimeTests.sln;
+
+program IshikoADLTests : IshikoTests
+{
+    archs = x86 x86_64;
+
+    if ($(toolset) == gnu)
+    {
+        cxx-compiler-options = "-std=c++11";
+        libs += IshikoTests IshikoFileSystem IshikoProcess IshikoText IshikoErrors boost_filesystem;
+    }
+
+    sources
+    {
+        ../../src/main.cpp
+    }
+}
